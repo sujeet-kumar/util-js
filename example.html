@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Util JS Demo</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="src/util.js"></script>
+<script type="text/javascript">
+Util.Config.set('name', 'sujeet');
+
+$(document).ready(function(){
+	
+	var name = Util.Config.get('name');
+	
+	$('#content').html(name.ucfirst() + '<br>(' + Util.dataSize(262143995904) + ')<br>' + Util.randomUUID() + '<br>' + Util.windowGUID() + '<br>' + Util.randomID() + '<br>' + (2342345657.4536).format(2) + '<br>z-index: ');
+	
+	for(var i=0; i<=10; i++) $('#content').append(' ' + Util.getZIndex());
+});
+</script>
+</head>
+
+<body>
+<div id="content" style="padding:10px;"></div>
+</body>
+</html>
