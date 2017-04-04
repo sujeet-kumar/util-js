@@ -430,6 +430,10 @@ Number.prototype.round = function (digits) {
     return Util.round(this, digits);
 };
 
+Number.prototype.format = function (decimals, sectionDelim, decimalDelim, sectionLength) {
+    return Util.numberFormat(this, decimals, sectionDelim, decimalDelim, sectionLength);
+};
+
 String.prototype.ucfirst = function () {
     if (this == null) {
         throw new TypeError('"String" is null or not defined');
@@ -444,7 +448,4 @@ String.prototype.truncate = function (max_length, replacement) {
     return Util.truncate(this, max_length, replacement);
 };
 
-Number.prototype.format = function (decimals, sectionDelim, decimalDelim, sectionLength) {
-    return Util.numberFormat(this, decimals, sectionDelim, decimalDelim, sectionLength);
-};
 
