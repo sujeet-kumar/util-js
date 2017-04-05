@@ -231,7 +231,7 @@ Util.ucfirst = function (str) {
 };
 
 /* truncate string upto specified length */
-Util.truncate = function (string, max_length, replacement) {
+Util.strTruncate = function (string, max_length, replacement) {
     string = '' + string;
     max_length = max_length || 100;
     if (typeof replacement == 'undefined') {
@@ -445,7 +445,7 @@ String.prototype.truncate = function (max_length, replacement) {
     if (this == null) {
         throw new TypeError('"String" is null or not defined');
     }
-    return Util.truncate(this, max_length, replacement);
+    return Util.strTruncate(this, max_length, replacement);
 };
 
 
