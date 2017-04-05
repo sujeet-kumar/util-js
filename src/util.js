@@ -447,5 +447,3 @@ String.prototype.truncate = function (max_length, replacement) {
     }
     return Util.strTruncate(this, max_length, replacement);
 };
-
-
