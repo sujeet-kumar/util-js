@@ -215,7 +215,7 @@ Util.objectSize = function (obj) {
     if (Util.isObject(obj)) {
         return Object.keys(obj).length;
     } else {
-        return null;
+        return 0;
     }
 };
 
@@ -431,6 +431,9 @@ Number.prototype.round = function (digits) {
 };
 
 Number.prototype.format = function (decimals, sectionDelim, decimalDelim, sectionLength) {
+    if (this == null) {
+        throw new TypeError('"Number" is null or not defined');
+    }
     return Util.numberFormat(this, decimals, sectionDelim, decimalDelim, sectionLength);
 };
 
@@ -446,4 +449,11 @@ String.prototype.truncate = function (max_length, replacement) {
         throw new TypeError('"String" is null or not defined');
     }
     return Util.strTruncate(this, max_length, replacement);
+};
+
+Object.prototype.size = function () {
+    if (this == null) {
+        throw new TypeError('"Object" is null or not defined');
+    }
+    return Object.keys(this).length;
 };
