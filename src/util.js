@@ -2,7 +2,7 @@
  * JavaScript Utility Library
  *
  * @author Sujeet <sujeetkv90@gmail.com>
- * @link https://github.com/sujeet-kumar/util-js
+ * @link https://github.com/sujeetkv/util-js
  */
 
 /* start generic Polyfills **********/
